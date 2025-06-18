@@ -7,7 +7,7 @@
 #include <unordered_map>
 #include <string>
 
-class config {
+class Config {
 public:
     void load_config(const std::string&);
     std::string get_value(const std::string&);
