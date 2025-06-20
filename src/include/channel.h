@@ -7,10 +7,10 @@
 #include <google/protobuf/service.h>
 #include "zookeeperclient.h"
 
-class Channel : public google::protobuf::RpcChannel {
+class channel : public google::protobuf::RpcChannel {
 public:
-    explicit Channel(bool connected = false);
-    ~Channel() override;
+    explicit channel(bool connected = false);
+    ~channel() override;
     void CallMethod(const google::protobuf::MethodDescriptor *method,
                     google::protobuf::RpcController *controller,
                     const google::protobuf::Message *request,

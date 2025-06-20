@@ -8,19 +8,19 @@
 #include "channel.h"
 #include <mutex>
 
-class Application {
+class application {
 public:
     static void Init(int argc, char *argv[]);
-    static Application &GetInstance();
+    static application &GetInstance();
     static void Destroy();
     static Config &GetConfig();
-    Application(const Application &) = delete;
-    Application &operator=(const Application &) = delete;
+    application(const application &) = delete;
+    application &operator=(const application &) = delete;
 private:
     static Config config_;
-    static Channel *channel_;
+    static application *app_;
     static std::mutex mutex_;
-    Application() = default;
-    ~Application() = default;
+    application() = default;
+    ~application() = default;
 };
 #endif //APPLICATION_H
